@@ -44,21 +44,21 @@ export default function UserForm({onClose}:Props) {
     textarea: z.string().min(30, "Minimum 30 characters required"),
   });
 
-  type DatasTypes = z.infer<typeof inputs>;
+  type DataTypes = z.infer<typeof inputs>;
 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<DatasTypes>({
+  } = useForm<DataTypes>({
     resolver: zodResolver(inputs),
   });
 
   const getError = (error?: ErrorType) =>
     error ? [{ message: error.message ?? "" }] : [];
 
-  const onSubmit = (data: DatasTypes) => {
+  const onSubmit = (data: DataTypes) => {
     console.log({ ...data, salaryRange: value });
     reset();
     setValue([200000, 800000]);
