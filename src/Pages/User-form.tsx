@@ -24,8 +24,6 @@ type Props ={
 
 export default function UserForm({onClose}:Props) {
 
-  // const [isOpen, setIsOpen] =React.useState(true);
-
   const [value, setValue] = React.useState<[number, number]>([200000, 800000]);
 
   const inputs = z.object({
@@ -68,7 +66,6 @@ export default function UserForm({onClose}:Props) {
     onClose();
   };
 
-  //  if (!isOpen) return null;
   return (
     <div className="bg-white shadow-2xl rounded-2xl p-6 sm:p-8 max-h-[80vh] overflow-y-auto">
       <div className="w-full max-w-3xl bg-white shadow-lg rounded-2xl p-6 sm:p-8">
