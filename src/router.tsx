@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Header from "./Pages/header";
 import JobPage from "./Pages/Job-page";
+import Profile from "./Pages/Profile";
 import { useState } from "react";
 import JobDetails from "./Pages/JobDetail";
 
@@ -16,6 +17,7 @@ export default function Router() {
         <Route path="/" element={<Home />} />
         <Route path="/job" element={<JobPage search={search} />} />
         <Route path="/job/:id" element={<JobDetails/>}/>
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );

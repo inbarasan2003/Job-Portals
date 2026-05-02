@@ -57,13 +57,15 @@ export default function Header({ search, setSearch }: Props) {
           </NavLink>
 
           <div className=" sm:flex shrink-0">
-            <AvatarIcon
-              alt="Inba"
-              src=""
-              name="Inbarasan Krishnamoorthy"
-              imageClassName="w-8 h-8 sm:w-9 sm:h-9 border-2 border-gray-300 rounded-full hover:border-indigo-500 transition"
-              fallbackClassName="text-gray-600"
-            />
+            <NavLink to="/profile">
+              <AvatarIcon
+                alt="Inba"
+                src=""
+                name="Inbarasan Krishnamoorthy"
+                imageClassName="w-8 h-8 sm:w-10 sm:h-10 border-2 border-indigo-200 rounded-full hover:border-pink-500 hover:ring-2 hover:ring-pink-300 transition-all duration-300 shadow-sm"
+                fallbackClassName="text-gray-600 font-bold bg-gradient-to-r from-indigo-100 to-pink-100"
+              />
+            </NavLink>
           </div>
         </nav>
       </div>
